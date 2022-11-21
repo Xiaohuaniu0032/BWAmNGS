@@ -18,33 +18,57 @@ GCF_000001405.40        PRJNA168                        reference genome        
 
 ## `assembly_summary_refseq.txt` file format
 
-See: https://ftp.ncbi.nlm.nih.gov/genomes/README_assembly_summary.txt for detail introduction.
+See: https://ftp.ncbi.nlm.nih.gov/genomes/README_assembly_summary.txt for detail.
 
 Column  1: "assembly_accession"
+
 Column  2: "bioproject"
+
 Column  3: "biosample"
+
 Column  4: "wgs_master"
+
 Column  5: "refseq_category"
+
 	Values: [reference genome | representative genome | na]
+
 Column  6: "taxid"
+
 Column  7: "species_taxid"
 > The species taxid will differ from the organism taxid (column 6) only when the organism was reported at a sub-species or strain level.
+
 Column  8: "organism_name"
+
 Column  9: "infraspecific_name"
+
 Column 10: "isolate"
+
 Column 11: "version_status"
+
 Column 12: "assembly_level"
+
 	Values: [Complete genome | Chromosome | Scaffold | Contig]
+
 Column 13: "release_type"
+
 Column 14: "genome_rep"
+
 Column 15: "seq_rel_date": Sequence release date
+
 Column 16: "asm_name": Assembly name
+
 Column 17: "submitter"
+
 Column 18: "gbrs_paired_asm"
+
 Column 19: "paired_asm_comp"
+
 Column 20: "ftp_path": the path to the directory on the NCBI genomes FTP site from which data for this genome assembly can be downloaded.
+
 Column 21: "excluded_from_refseq"
+
 Column 22: "relation_to_type_material"
+
 Column 23: "asm_not_live_date" 
 
 
@@ -71,6 +95,15 @@ One line for a taxid. Only first column will be used.
 386585,Escherichia coli O157:H7 str. Sakai
 
 ```
+
+### Download ref seq genome
+`perl /path/BWAmNGS/scripts/download_wget.pl /path/BWAmNGS/db/taxid.list /path/BWAmNGS/scripts/refseq.download.xls $PWD`
+
+```
+[Downloading GCF_000005845.2_ASM584v2_genomic.fna.gz ...]
+[Downloading GCF_000008865.2_ASM886v2_genomic.fna.gz ...]
+```
+
 
 ## Test
 
