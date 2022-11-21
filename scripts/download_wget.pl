@@ -43,6 +43,7 @@ foreach my $item (keys %ftp_path){
 	my $basename = basename($dirname); # log file prefix
 	my $wget_log = "$outdir/$basename.wget.log";
 	print "[Downloading $fa_name ...]\n";
+	chdir $outdir;
 	`wget $path >$wget_log 2>&1`;
 
 	# check *.wget.log file for if downloaded successfully
