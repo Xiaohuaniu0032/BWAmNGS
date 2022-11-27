@@ -1,5 +1,5 @@
-test/simulate_fq
-test/combined_fq
+test/simulate_fq/*.fastq
+test/combined_fq/*.fastq
 test/Pan_Bacterial_Research_Panel/IonDual_0129.sam
 test/analysis/test.combined.sam
 db/Pan_Bacterial_Research_Panel
